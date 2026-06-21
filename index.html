@@ -3,57 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Барбершоп «БРИТВА» | Мужские стрижки</title>
-    <!-- Шрифты -->
+    <title>Барбершоп «БРИТВА» | Главная</title>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;700;900&display=swap" rel="stylesheet">
-    <!-- Стили -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Шапка -->
     <header class="container">
         <div class="logo">БРИТВА</div>
-        <nav class="nav-links">
-            <a href="#services">Услуги</a>
-            <a href="#wisdom">Мудрость</a>
-            <a href="#team">Команда</a>
-            <a href="#gallery">Галерея</a>
-            <a href="#contacts">Контакты</a>
+        <nav class="nav-links" id="mainNav">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="team.html">Команда</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="quotes.html">Мудрость</a>
+            <a href="contacts.html">Контакты</a>
         </nav>
-        <a href="#" class="btn-record">ЗАПИСАТЬСЯ</a>
+        <a href="contacts.html#form" class="btn-record">ЗАПИСАТЬСЯ</a>
     </header>
 
-    <!-- Герой -->
     <section class="hero container">
         <h1>Мужская<br>стрижка<br>без компромиссов</h1>
         <p>Только опасная бритва, характер и стиль</p>
     </section>
 
-    <!-- Услуги -->
     <section class="container" id="services">
         <h2 class="section-title">Что мы делаем</h2>
         <div class="services-grid">
             <div class="service-card">
                 <h3>Стрижка</h3>
                 <p>Классика, андеркат, фэйд — машинка и ножницы творят чудеса.</p>
+                <a href="services.html" class="btn-record" style="margin-top:15px;">Подробнее</a>
             </div>
             <div class="service-card">
                 <h3>Бритьё</h3>
                 <p>Королевское бритьё опасной бритвой с горячим компрессом.</p>
+                <a href="services.html" class="btn-record" style="margin-top:15px;">Подробнее</a>
             </div>
             <div class="service-card">
                 <h3>Борода</h3>
                 <p>Моделирование и уход. Ваша борода станет произведением искусства.</p>
+                <a href="services.html" class="btn-record" style="margin-top:15px;">Подробнее</a>
             </div>
             <div class="service-card">
                 <h3>Комплекс</h3>
                 <p>Стрижка + борода + виски (в подарок) = идеальный мужской день.</p>
+                <a href="services.html" class="btn-record" style="margin-top:15px;">Подробнее</a>
             </div>
         </div>
     </section>
 
-    <!-- Блок "Мудрость дня" -->
     <section class="container" id="wisdom">
         <h2 class="section-title">Мудрость дня</h2>
         <div class="quote-widget">
@@ -61,63 +59,43 @@
             <div class="quote-text" id="quoteText">«Лучшая стрижка — та, после которой тебе не нужно смотреть в зеркало. Ты и так знаешь, что ты в порядке.»</div>
             <div class="quote-author" id="quoteAuthor">Старый брадобрей</div>
             <button class="quote-refresh" id="newQuoteBtn">ЕЩЁ МУДРОСТЬ</button>
+            <p style="margin-top:20px;"><a href="quotes.html" style="color:#ff3333; text-decoration:none; font-weight:700;">→ Все цитаты</a></p>
         </div>
     </section>
 
-    <!-- Команда -->
-    <section class="container" id="team">
+    <section class="container" id="team-preview">
         <h2 class="section-title">Брадобреи</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Мастер Стас">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Стас">
                 <h4>СТАС</h4>
                 <span>Повелитель пены</span>
             </div>
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Мастер Дэн">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face" alt="Дэн">
                 <h4>ДЭН</h4>
                 <span>Укротитель бород</span>
             </div>
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Мастер Лекс">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face" alt="Лекс">
                 <h4>ЛЕКС</h4>
                 <span>Опасная бритва</span>
             </div>
             <div class="team-member">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face" alt="Мастер Рэй">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face" alt="Рэй">
                 <h4>РЭЙ</h4>
                 <span>Стиль & Фэйд</span>
             </div>
         </div>
-    </section>
-
-    <!-- Галерея -->
-    <section class="container" id="gallery">
-        <h2 class="section-title">Атмосфера</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=400&fit=crop" alt="Интерьер барбершопа">
-            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&h=400&fit=crop" alt="Процесс стрижки">
-            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=400&fit=crop" alt="Инструменты">
-            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&h=400&fit=crop" alt="Бритье">
-            <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db7?w=600&h=400&fit=crop" alt="Барбер за работой">
-            <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&h=400&fit=crop" alt="Детали интерьера">
+        <div style="text-align:center; margin-top:40px;">
+            <a href="team.html" class="btn-record">ВСЯ КОМАНДА</a>
         </div>
     </section>
 
-    <!-- Контакты -->
-    <section class="container contacts" id="contacts">
-        <h2 class="section-title">Приходи</h2>
-        <p><strong>Адрес:</strong> ул. Настоящих Мужиков, 42, Москва</p>
-        <p><strong>Телефон:</strong> <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-        <p><strong>Часы:</strong> Пн–Вс 10:00–22:00</p>
-    </section>
-
-    <!-- Футер -->
     <footer>
         <div class="container">© 2026 Барбершоп «БРИТВА». Все права защищены. #БудьМужиком</div>
     </footer>
 
-    <!-- Скрипты -->
     <script src="script.js"></script>
 </body>
 </html>

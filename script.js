@@ -1,4 +1,13 @@
-// Массив цитат (30+ штук)
+// Активная ссылка в навигации
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
+});
+
+// Массив цитат
 const quotes = [
     { text: "Лучшая стрижка — та, после которой тебе не нужно смотреть в зеркало. Ты и так знаешь, что ты в порядке.", author: "Старый брадобрей" },
     { text: "Борода не делает тебя мужчиной. Но мужчина может сделать бороду своим оружием.", author: "Мастер Холл" },
@@ -32,38 +41,66 @@ const quotes = [
     { text: "Настоящее мужество — это не отсутствие страха, а аккуратная борода.", author: "Измененный классик" }
 ];
 
-// DOM-элементы
+// Виджет на главной (если есть элементы)
 const quoteText = document.getElementById('quoteText');
 const quoteAuthor = document.getElementById('quoteAuthor');
 const newQuoteBtn = document.getElementById('newQuoteBtn');
 
-// Получить случайную цитату
-function getRandomQuote() {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
-}
-
-// Отобразить цитату с анимацией
-function setQuote(quote) {
-    quoteText.style.opacity = '0';
-    quoteAuthor.style.opacity = '0';
-    setTimeout(() => {
-        quoteText.textContent = `«${quote.text}»`;
-        quoteAuthor.textContent = quote.author;
-        quoteText.style.opacity = '1';
-        quoteAuthor.style.opacity = '1';
-    }, 150);
-}
-
-// При загрузке страницы — случайная цитата
-setQuote(getRandomQuote());
-
-// Обработчик кнопки
-newQuoteBtn.addEventListener('click', () => {
+if (quoteText && quoteAuthor && newQuoteBtn) {
+    function getRandomQuote() {
+        const i = Math.floor(Math.random() * quotes.length);
+        return quotes[i];
+    }
+    function setQuote(quote) {
+        quoteText.style.opacity = '0';
+        quoteAuthor.style.opacity = '0';
+        setTimeout(() => {
+            quoteText.textContent = `«${quote.text}»`;
+            quoteAuthor.textContent = quote.author;
+            quoteText.style.opacity = '1';
+            quoteAuthor.style.opacity = '1';
+        }, 150);
+    }
     setQuote(getRandomQuote());
-    // Временный эффект на кнопке
-    newQuoteBtn.textContent = '...ВОТ...';
-    setTimeout(() => {
-        newQuoteBtn.textContent = 'ЕЩЁ МУДРОСТЬ';
-    }, 400);
-});
+    newQuoteBtn.addEventListener('click', () => {
+        setQuote(getRandomQuote());
+        newQuoteBtn.textContent = '...ВОТ...';
+        setTimeout(() => { newQuoteBtn.textContent = 'ЕЩЁ МУДРОСТЬ'; }, 400);
+    });
+}
+
+// Страница quotes.html – рендер всех цитат
+const quotesGrid = document.getElementById('quotesGrid');
+if (quotesGrid) {
+    quotes.forEach(q => {
+        const card = document.createElement('div');
+        card.className = 'quote-card';
+        card.innerHTML = `«${q.text}»<div class="author">— ${q.author}</div>`;
+        quotesGrid.appendChild(card);
+    });
+}
+
+// Лайтбокс для галереи
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const galleryImages = document.querySelectorAll('.gallery-img');
+
+if (lightbox && lightboxImg && lightboxClose) {
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.classList.add('active');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        });
+    });
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+}
