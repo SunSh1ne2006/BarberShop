@@ -3,154 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OldBoy Barbershop — мужские стрижки и бритьё</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>DK BARBER - Барбершоп для мужчин</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Шапка / Навигация -->
     <header>
-        <div class="header-inner">
-            <div class="logo" data-page="home"><i class="fas fa-cut"></i> OldBoy</div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
-            <ul class="nav-links" id="navLinks">
-                <li><a class="nav-link active-page" data-page="home">Главная</a></li>
-                <li><a class="nav-link" data-page="services">Услуги</a></li>
-                <li><a class="nav-link" data-page="products">Продукты</a></li>
-                <li><a class="nav-link" data-page="team">Команда</a></li>
-                <li><a class="nav-link" data-page="about">О нас</a></li>
-                <li><a class="nav-link" data-page="contact">Контакты</a></li>
-                <li><a class="nav-link cart-link" data-page="cart"><i class="fas fa-shopping-cart"></i> Запись <span id="cart-count">0</span></a></li>
-            </ul>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>BARBER</h1>
+            </div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#hero" class="active">Главная</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Главная -->
-        <section id="home-section" class="page-section active">
-            <div class="hero">
-                <div class="container">
-                    <h1>OldBoy Barbershop — <span>стиль, проверенный временем</span></h1>
-                    <p>Классические мужские стрижки, бритьё опасной бритвой и премиальный уход. Создай свой образ вместе с нами.</p>
-                    <button class="btn" data-page="services"><i class="fas fa-scissors"></i> Выбрать услугу</button>
-                    <button class="btn btn-outline" data-page="products">Продукты для ухода</button>
-                </div>
-            </div>
+        <!-- Hero блок -->
+        <section id="hero" class="hero">
             <div class="container">
-                <div class="banners">
-                    <div class="banner-card banner-1">
-                        <h3>Скидка 20%</h3>
-                        <p>На первое посещение для новых клиентов</p>
-                        <button class="btn" data-page="services">Записаться</button>
+                <div class="hero-content">
+                    <span class="hero-tag">БАРБЕРШОФ ДЛЯ МУЖЧИН, КОТОРЫЕ ЦЕНЯТ СТИЛЬ</span>
+                    <h2 class="hero-title">ТВОЙ СТИЛЬ - <br>МОЯ РАБОТА</h2>
+                    <p class="hero-description">
+                        В DK BARBER создаём не просто стрижку, а стиль, который говорит о характере мужчины.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">99%</span>
+                            <span class="stat-label">Довольных клиентов</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Более 6 лет опыта</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">300+</span>
+                            <span class="stat-label">Более 300 клиентов</span>
+                        </div>
                     </div>
-                    <div class="banner-card banner-2">
-                        <h3>Бесплатная укладка</h3>
-                        <p>При заказе любой стрижки с уходом за бородой</p>
-                        <button class="btn" data-page="services">Подробнее</button>
-                    </div>
-                </div>
-
-                <div class="tabs-container">
-                    <h2 style="margin-bottom: 10px;">Популярные услуги</h2>
-                    <div class="tabs-nav">
-                        <button class="tab-btn active" data-tab="tab-haircuts">Стрижки</button>
-                        <button class="tab-btn" data-tab="tab-shaving">Бритьё и борода</button>
-                        <button class="tab-btn" data-tab="tab-products">Продукты</button>
-                    </div>
-                    <div class="tab-pane active" id="tab-haircuts">
-                        <div class="products-grid" id="homeHaircutsContainer"></div>
-                    </div>
-                    <div class="tab-pane" id="tab-shaving">
-                        <div class="products-grid" id="homeShavingContainer"></div>
-                    </div>
-                    <div class="tab-pane" id="tab-products">
-                        <div class="products-grid" id="homeProductsContainer"></div>
+                    <div class="hero-buttons">
+                        <a href="#contacts" class="btn btn-primary">Записаться</a>
+                        <a href="#prices" class="btn btn-secondary">Цены</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Услуги -->
-        <section id="services-section" class="page-section">
+        <!-- Призыв к действию -->
+        <section class="cta-section">
             <div class="container">
-                <h2>Все услуги</h2>
-                <div class="products-grid" id="servicesContainer"></div>
-            </div>
-        </section>
-        <section id="products-section" class="page-section">
-            <div class="container">
-                <h2>Продукты для ухода</h2>
-                <div class="products-grid" id="productsContainer"></div>
+                <p>Приходи и насладись атмосферой ко мне уже прямо сейчас записавшись как онлайн, так и по номеру телефона.</p>
             </div>
         </section>
 
-        <!-- Детальная услуги/товара -->
-        <section id="product-detail-section" class="page-section">
-            <div class="container" id="productDetailContainer"></div>
-        </section>
-
-        <!-- Корзина (запись) -->
-        <section id="cart-section" class="page-section">
+        <!-- Цены -->
+        <section id="prices" class="prices-page section">
             <div class="container">
-                <h2>Ваша запись</h2>
-                <div class="cart-page-container" id="cartPageContent"></div>
-            </div>
-        </section>
-
-        <!-- Команда -->
-        <section id="team-section" class="page-section">
-            <div class="container">
-                <h2>Наши барберы</h2>
-                <div class="team-grid" id="teamContainer"></div>
-            </div>
-        </section>
-
-        <!-- О нас -->
-        <section id="about-section" class="page-section">
-            <div class="container">
-                <h2>О нас</h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-                    <div style="flex:1 1 400px;">
-                        <h3>Традиции мужского стиля с 2008 года</h3>
-                        <p>OldBoy Barbershop — это место, где классика встречается с современными трендами. Мы предлагаем безупречные стрижки, королевское бритьё и атмосферу настоящего мужского клуба. Наши мастера — профессионалы с многолетним опытом.</p>
+                <h1 class="page-title">ЦЕНЫ НА УСЛУГИ</h1>
+                <div class="prices-grid">
+                    <div class="price-card">
+                        <h3>Мужская стрижка</h3>
+                        <ul class="service-list">
+                            <li>мытье головы</li>
+                            <li>стрижка</li>
+                            <li>укладку косметическими средствами премиум класса.</li>
+                        </ul>
+                        <div class="price-tag">40 BYN</div>
                     </div>
-                    <div style="flex:1 1 300px;">
-                        <i class="fas fa-cut" style="font-size: 10rem; color: #d4af37; width: 100%; text-align: center;"></i>
+                    <div class="price-card">
+                        <h3>Мужская стрижка + борода</h3>
+                        <ul class="service-list">
+                            <li>мытье головы</li>
+                            <li>стрижка</li>
+                            <li>укладку косметическими средствами премиум класса.</li>
+                            <li>Создание формы бороды и чётких контуров</li>
+                        </ul>
+                        <div class="price-tag">60 BYN</div>
+                    </div>
+                    <div class="price-card">
+                        <h3>Тонирование бороды</h3>
+                        <ul class="service-list">
+                            <li>подбор оттенка</li>
+                            <li>подготовка и мытье бороды</li>
+                            <li>нанесение тонирующего средства</li>
+                            <li>сушка и укладка</li>
+                        </ul>
+                        <div class="price-tag">25 BYN</div>
+                    </div>
+                    <div class="price-card">
+                        <h3>Оформление бороды</h3>
+                        <ul class="service-list">
+                            <li>подбор формы</li>
+                            <li>подготовка и мытье бороды</li>
+                            <li>стрижка и моделирование</li>
+                            <li>окантовка и бритье</li>
+                            <li>сушка и укладка</li>
+                        </ul>
+                        <div class="price-tag">40 BYN</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Контакты -->
-        <section id="contact-section" class="page-section">
+        <section id="contacts" class="contacts-page section">
             <div class="container">
-                <h2>Связаться с нами</h2>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group"><input type="text" placeholder="Ваше имя" required></div>
-                        <div class="form-group"><input type="email" placeholder="Email" required></div>
-                        <div class="form-group"><textarea rows="4" placeholder="Ваш вопрос или пожелание" required></textarea></div>
-                        <button type="submit" class="btn" style="width:100%;">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Преимущества -->
-        <section id="features" class="features">
-            <div class="container">
-                <h2>Почему выбирают нас</h2>
-                <div class="features-grid">
-                    <div class="feature"><i class="fas fa-clock"></i><h4>Удобное время</h4><p>Работаем с 10:00 до 22:00 без выходных</p></div>
-                    <div class="feature"><i class="fas fa-beer"></i><h4>Бесплатный бар</h4><p>Виски, кофе или чай в подарок</p></div>
-                    <div class="feature"><i class="fas fa-star"></i><h4>Премиум-сервис</h4><p>Горячее полотенце и массаж головы</p></div>
-                    <div class="feature"><i class="fas fa-map-marker-alt"></i><h4>Центр города</h4><p>Удобная парковка и доступность</p></div>
+                <h1 class="page-title">ДК BARBER</h1>
+                <div class="contacts-grid">
+                    <div class="contact-block">
+                        <h3>Адрес</h3>
+                        <p>Адрес город Пинск, улица ******, этаж *, кабинет *</p>
+                    </div>
+                    <div class="contact-block">
+                        <h3>ЛОКАЦИЯ</h3>
+                        <div class="map-placeholder">
+                            <p>🗺️ Карта загружается...</p>
+                            <small>Здесь будет карта с местоположением</small>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <h3>КОНТАКТЫ</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-label">DIKIDI Online:</span>
+                                <span>**********</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Telegram:</span>
+                                <span>@**********</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Instagram:</span>
+                                <span>**********</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">WhatsApp:</span>
+                                <span>**********</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Телефон:</span>
+                                <span>+375**********</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <h3>График</h3>
+                        <div class="schedule">
+                            <p><strong>Время:</strong></p>
+                            <p>Вт-Пт: 10:00-22:00</p>
+                            <p>Сб: 10:00-19:00</p>
+                            <p class="note">Выходной: Пн, Вс</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Подвал -->
     <footer>
-        <div class="container">© 2025 OldBoy Barbershop. Все права защищены. ул. Барберская, 12 | +7 (999) 123-45-67</div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="#">inst:</a>
+                    <span>+375**********</span>
+                </div>
+                <div class="footer-copy">
+                    <p>© DK BARBER, 2019-2026.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
