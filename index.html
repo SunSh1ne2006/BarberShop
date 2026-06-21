@@ -8,169 +8,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка / Навигация -->
+    <!-- Шапка (только логотип) -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <h1>BARBER</h1>
             </div>
-            <nav>
-                <ul id="nav-list">
-                    <li><a href="#hero" class="active">Главная</a></li>
-                    <li><a href="#prices">Цены</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero блок -->
-        <section id="hero" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <span class="hero-tag">БАРБЕРШОФ ДЛЯ МУЖЧИН, КОТОРЫЕ ЦЕНЯТ СТИЛЬ</span>
-                    <h2 class="hero-title">ТВОЙ СТИЛЬ - <br>МОЯ РАБОТА</h2>
-                    <p class="hero-description">
-                        В DK BARBER создаём не просто стрижку, а стиль, который говорит о характере мужчины.
-                    </p>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">99%</span>
-                            <span class="stat-label">Довольных клиентов</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">6+</span>
-                            <span class="stat-label">Более 6 лет опыта</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">300+</span>
-                            <span class="stat-label">Более 300 клиентов</span>
-                        </div>
+    <!-- Hero блок -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">БАРБЕРШОФ ДЛЯ МУЖЧИН, КОТОРЫЕ ЦЕНЯТ СТИЛЬ</span>
+                <h2 class="hero-title">ТВОЙ СТИЛЬ - <br>МОЯ РАБОТА</h2>
+                <p class="hero-description">
+                    В DK BARBER создаём не просто стрижку, а стиль, который говорит о характере мужчины.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">99%</span>
+                        <span class="stat-label">Довольных клиентов</span>
                     </div>
-                    <div class="hero-buttons">
-                        <a href="#contacts" class="btn btn-primary">Записаться</a>
-                        <a href="#prices" class="btn btn-secondary">Цены</a>
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-label">Более 6 лет опыта</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">300+</span>
+                        <span class="stat-label">Более 300 клиентов</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Призыв к действию -->
-        <section class="cta-section">
-            <div class="container">
-                <p>Приходи и насладись атмосферой ко мне уже прямо сейчас записавшись как онлайн, так и по номеру телефона.</p>
-            </div>
-        </section>
-
-        <!-- Цены -->
-        <section id="prices" class="prices-page section">
-            <div class="container">
-                <h1 class="page-title">ЦЕНЫ НА УСЛУГИ</h1>
-                <div class="prices-grid">
-                    <div class="price-card">
-                        <h3>Мужская стрижка</h3>
-                        <ul class="service-list">
-                            <li>мытье головы</li>
-                            <li>стрижка</li>
-                            <li>укладку косметическими средствами премиум класса.</li>
-                        </ul>
-                        <div class="price-tag">40 BYN</div>
-                    </div>
-                    <div class="price-card">
-                        <h3>Мужская стрижка + борода</h3>
-                        <ul class="service-list">
-                            <li>мытье головы</li>
-                            <li>стрижка</li>
-                            <li>укладку косметическими средствами премиум класса.</li>
-                            <li>Создание формы бороды и чётких контуров</li>
-                        </ul>
-                        <div class="price-tag">60 BYN</div>
-                    </div>
-                    <div class="price-card">
-                        <h3>Тонирование бороды</h3>
-                        <ul class="service-list">
-                            <li>подбор оттенка</li>
-                            <li>подготовка и мытье бороды</li>
-                            <li>нанесение тонирующего средства</li>
-                            <li>сушка и укладка</li>
-                        </ul>
-                        <div class="price-tag">25 BYN</div>
-                    </div>
-                    <div class="price-card">
-                        <h3>Оформление бороды</h3>
-                        <ul class="service-list">
-                            <li>подбор формы</li>
-                            <li>подготовка и мытье бороды</li>
-                            <li>стрижка и моделирование</li>
-                            <li>окантовка и бритье</li>
-                            <li>сушка и укладка</li>
-                        </ul>
-                        <div class="price-tag">40 BYN</div>
-                    </div>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Записаться</a>
+                    <a href="#" class="btn btn-secondary">Цены</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Контакты -->
-        <section id="contacts" class="contacts-page section">
-            <div class="container">
-                <h1 class="page-title">ДК BARBER</h1>
-                <div class="contacts-grid">
-                    <div class="contact-block">
-                        <h3>Адрес</h3>
-                        <p>Адрес город Пинск, улица ******, этаж *, кабинет *</p>
-                    </div>
-                    <div class="contact-block">
-                        <h3>ЛОКАЦИЯ</h3>
-                        <div class="map-placeholder">
-                            <p>🗺️ Карта загружается...</p>
-                            <small>Здесь будет карта с местоположением</small>
-                        </div>
-                    </div>
-                    <div class="contact-block">
-                        <h3>КОНТАКТЫ</h3>
-                        <div class="contact-list">
-                            <div class="contact-item">
-                                <span class="contact-label">DIKIDI Online:</span>
-                                <span>**********</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Telegram:</span>
-                                <span>@**********</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Instagram:</span>
-                                <span>**********</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">WhatsApp:</span>
-                                <span>**********</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Телефон:</span>
-                                <span>+375**********</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-block">
-                        <h3>График</h3>
-                        <div class="schedule">
-                            <p><strong>Время:</strong></p>
-                            <p>Вт-Пт: 10:00-22:00</p>
-                            <p>Сб: 10:00-19:00</p>
-                            <p class="note">Выходной: Пн, Вс</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Призыв к действию -->
+    <section class="cta-section">
+        <div class="container">
+            <p>Приходи и насладись атмосферой ко мне уже прямо сейчас записавшись как онлайн, так и по номеру телефона.</p>
+        </div>
+    </section>
 
     <!-- Подвал -->
     <footer>
